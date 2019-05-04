@@ -7,15 +7,16 @@
     android:layout_height="match_parent"
     android:layout_column="2"
     android:layout_row="2"
-    android:layout_margin="25dp"
-    android:layout_marginTop="50dp">
+    android:layout_margin="10dp"
+    android:layout_marginTop="50dp"
+    tools:ignore="MissingDefaultResource" >
 
 
     <TextView
         android:id="@+id/celcius"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Celcius = "
+        android:text="Celsius = "
         android:layout_column="0"
         android:layout_row="0"
         android:textSize="30sp"
@@ -33,17 +34,17 @@
         android:inputType="number" />
 
     <TextView
-        android:id="@+id/Farenheight"
+        android:id="@+id/Fahrenheit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Farenheight = "
+        android:text="Fahrenheit = "
         android:layout_column="0"
         android:layout_row="1"
         android:textSize="30sp"
         android:textColor="#381717"/>
 
     <EditText
-        android:id="@+id/editFaren"
+        android:id="@+id/editFar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_row="1"
@@ -51,6 +52,35 @@
         android:layout_column="1"
         android:ems="10"
         android:inputType="number" />
+
+    <Button
+        android:id="@+id/convertTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:layout_marginTop="10dp"
+        android:onClick="tempratureConverter"
+        android:text="Convert"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/cResult"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_row="2"
+        android:layout_column="1"
+        android:textSize="30sp"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/fResult"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_row="3"
+        android:layout_column="1"
+        android:textSize="30sp"
+        android:layout_marginLeft="30dp"/>
 
 
 </GridLayout>
