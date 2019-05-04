@@ -24,51 +24,49 @@ public class MainActivity extends AppCompatActivity {
     double c;
     double f;
 
-   public void tempratureConverter(View view){
-        editCel = (EditText) findViewById(R.id.editCel);
-        editFar = (EditText) findViewById(R.id.editFar);
-        cResult = (TextView) findViewById(R.id.cResult);
-        fResult = (TextView) findViewById(R.id.fResult);
+   public void tempratureConverter(View view) {
+       editCel = (EditText) findViewById(R.id.editCel);
+       editFar = (EditText) findViewById(R.id.editFar);
+       cResult = (TextView) findViewById(R.id.cResult);
+       fResult = (TextView) findViewById(R.id.fResult);
 
-        String c_str = editCel.getText().toString();
-        String f_str = editFar.getText().toString();
+       String c_str = editCel.getText().toString();
+       String f_str = editFar.getText().toString();
 
-        if(c_str.isEmpty()){
-            c=0;
-        }
-        else {
-            c = Double.parseDouble(c_str);
-        }
+       if (c_str.isEmpty()) {
+           c = 0;
+       } else {
+           c = Double.parseDouble(c_str);
+       }
 
-        if (f_str.isEmpty()){
-            f=0;
-        }
-        else
-            f = Double.parseDouble(f_str);
+       if (f_str.isEmpty()) {
+           f = 0;
+       } else
+           f = Double.parseDouble(f_str);
 
-        double cR, fR;
+       double cR, fR;
 
-        //cR = (f - 32) * 5 / 9;
-        //fR = c * 9 / 5 + 32;
+       //cR = (f - 32) * 5 / 9;
+       //fR = c * 9 / 5 + 32;
 
-        if (!c_str.isEmpty()){
-            fR = c * 9 / 5 + 32;
-            fResult.setText((String.valueOf((double)Math.round(fR*100)/100)+"F"));
-        }
-        else{
-            //cR = (f - 32) * 5 / 9;
-            fResult.setText(" ");
-        }
-        if (!f_str.isEmpty()){
-            cR = (f - 32) * 5 / 9;
-            cResult.setText(String.valueOf((double)Math.round(cR*100)/100) + "C");
-        }
-        else
-            cResult.setText(" ");
+       if (!c_str.isEmpty()) {
+           fR = c * 9 / 5 + 32;
+           fResult.setText((String.valueOf((double) Math.round(fR * 100) / 100) + "F"));
+       } else {
+           //cR = (f - 32) * 5 / 9;
+           fResult.setText(" ");
+       }
+       if (!f_str.isEmpty()) {
+           cR = (f - 32) * 5 / 9;
+           cResult.setText(String.valueOf((double) Math.round(cR * 100) / 100) + "C");
+       } else{
+           cResult.setText(" ");
+       }
+       if(c==0 && f==0){
+           Toast.makeText(getApplicationContext(),"Enter Value", Toast.LENGTH_LONG).show();
+       }
+   }
 
-        //cResult.setText(String.valueOf(cR)+"C");
-        //fResult.setText(String.valueOf(fR)+"F");
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

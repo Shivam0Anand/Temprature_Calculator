@@ -16,7 +16,7 @@
         android:id="@+id/celcius"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Celsius = "
+        android:text="Celcius = "
         android:layout_column="0"
         android:layout_row="0"
         android:textSize="30sp"
@@ -28,10 +28,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_row="0"
-        android:textSize="40sp"
         android:layout_column="1"
         android:ems="10"
-        android:inputType="number" />
+        android:hint="@string/celcius_editor"
+        android:inputType="number"
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/Fahrenheit"
@@ -48,9 +49,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_row="1"
-        android:textSize="40sp"
+        android:textSize="29sp"
         android:layout_column="1"
         android:ems="10"
+        android:hint="@string/faren_editor"
         android:inputType="number" />
 
     <Button

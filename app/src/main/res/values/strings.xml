@@ -2,4 +2,6 @@
     <string name="app_name">Temprature Changer</string>
     <string name="action_settings">Settings</string>
     <string name="temprature_controller">Temprature Controller</string>
+    <string name="celcius_editor">Enter celcius</string>
+    <string name="faren_editor">Enter Fahrenheit</string>
 </resources>
